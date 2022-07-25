@@ -9,12 +9,41 @@ function clickbutton(target){
     } else {
         let last_value = result.innerHTML.slice(-1);
         
-         if ((last_value == "+" || "*" || "-" || "/") 
-        + (last_value == "+" || "*" || "-" || "/")) {
-      result.innerHTML = result.innerHTML.slice(0,-1) + target_value
-
-         } 
-    else  if (result.innerHTML == "0") {
+         if (target_value == "+"  &&last_value == "+" ){
+      result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "+"  &&last_value == "-" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else  if (target_value == "+"  &&last_value == "*" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "+"  &&last_value == "/" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "-"  &&last_value == "+" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "-"  &&last_value == "-" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "-"  &&last_value == "*" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "-"  &&last_value == "/" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "*"  &&last_value == "+" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "*"  &&last_value == "-" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "*"  &&last_value == "*" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "*"  &&last_value == "/" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "/"  &&last_value == "+" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "/"  &&last_value == "-" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "/"  &&last_value == "*" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         } else if (target_value == "/"  &&last_value == "/" )　{
+            result.innerHTML = result.innerHTML.slice(0, -1) + target_value
+         }
+         
+             else  if (result.innerHTML == "0") {
               result.innerHTML = target_value
          } else {
              result.innerHTML += target_value
